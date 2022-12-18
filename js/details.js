@@ -1,10 +1,6 @@
 //Set Dark Theme if it in the home page
 window.onload = () => {
-    if (localStorage.getItem("Dark")) {
-        setTimeout(function(){
- 	        switchTheme();
-        }, 2000);
-    };
+    if (localStorage.getItem("Dark")) switchTheme();
 }
 
 // Switch Theme
