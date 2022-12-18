@@ -137,5 +137,5 @@ function printTheDetails(jsData){
 //Back to home page
 backBtn.onclick = () => {
     window.sessionStorage.clear();
-    location.assign("../index.html");
+    location.assign("https://osamaeid1.github.io/Rest-Countries-Api/");
 }
