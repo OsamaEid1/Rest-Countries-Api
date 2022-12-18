@@ -1,0 +1,44 @@
+/* Start Global Rules  */
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+}
+/* End Global Rules  */
+
+/* Start Back Home Button */
+.container button{
+    box-shadow: rgb(0 0 0 / 15%) 1px 2px 7px 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.container button:hover i{
+    transition: 0.5s;
+}
+.container button:hover i{
+    transform: translateX(-3px);
+}
+/* End Back Home Button */
+
+/* Start Details  */
+section p{
+    font-weight: 600;
+}
+section p span{
+    font-weight: 400;
+}
+.borders p{
+    white-space: nowrap;
+}
+.borders span{
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: 400;
+    border: none;
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 15%) 1px 2px 7px 1px;
+    white-space: nowrap;
+}
+/* End Details  */

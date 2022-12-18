@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Rest Countries Api</title>
+    
+    <!-- Font=Awesome Library-->
+    <script src="https://kit.fontawesome.com/a88ad39328.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap Files -->
+    <link rel="stylesheet" href="css/bootstrap.css.map">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500;600;700&family=Manrope:wght@800&family=Nunito+Sans:wght@300;600;800&family=Rubik:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <!-- Start header  -->
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <h2 class="fw-bolder">Where in the world?</h2>
+            <div class="theme-switcher p-2">
+                <i class="far fa-light fa-moon"></i>
+                <span class="fw-bold ms-1">Dark Mode</span>
+            </div>
+        </div>
+    </header>
+    <!-- End header  -->
+    <!-- Start Search -->
+    <div class="search container d-lg-flex justify-content-between align-items-center py-5">
+            <div class="input-group flex-nowrap p-2 mb-5 rounded">
+                <span class="input-group-text border-0" style="background-color: transparent;" id="addon-wrapping"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="form-control border-0 p-0 fw-normal" placeholder="Search for a country..." aria-label="Username"
+                    aria-describedby="addon-wrapping" for="addon-wrapping" style="background-color: transparent;">
+            </div>
+        <select class="p-2 mb-5 rounded">
+            <option value="none">All</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+    </div>
+    <!-- End Search -->
+    <!-- Start Countries  -->
+    <div class="countries container mb-4">
+        <!-- Countries Will Added Here with REST countries API -->
+    </div>
+    <!-- End Countries  -->
+    
+    <!-- Back to top button -->
+    <button class="scroll-top-btn">UP</button>
+
+    <!-- Start Footer -->
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/OsamaEid1" target="_blank">Osama Eid</a>.
+    </div>
+    <!-- End Footer  -->
+    <script src="js/main.js"></script>
+</body>
+</html>

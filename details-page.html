@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Rest Countries Api</title>
+
+    <!-- Font=Awesome Library-->
+    <script src="https://kit.fontawesome.com/a88ad39328.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap Files -->
+    <link rel="stylesheet" href="css/bootstrap.css.map">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Custom CSS For This Page -->
+    <link rel="stylesheet" href="css/details-page.css">
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;500;600;700&family=Manrope:wght@800&family=Nunito+Sans:wght@300;600;800&family=Rubik:wght@400;500;700&family=Work+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <!-- Start header  -->
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <h2 class="fw-bolder">Where in the world?</h2>
+            <div class="theme-switcher p-2">
+                <i class="far fa-light fa-moon"></i>
+                <span class="fw-bold ms-1">Dark Mode</span>
+            </div>
+        </div>
+    </header>
+    <!-- End header  -->
+
+    <!-- Start Container -->
+    <div class="container pt-5"> 
+        <!-- Start Back Button -->
+        <button class="d-flex align-items-center gap-2 bg-white p-2 ps-4 border-0"><i class="fa-solid fa-arrow-left-long"></i> Back</button>
+        <!-- End Back Button -->
+
+        <!-- Start Content Section  -->
+        <section class="row flex-column flex-lg-row gap-5 align-items-center mt-5">
+            <!-- Start Flag  -->
+                <!-- The Flag Will Added Dynamically!  -->
+            <div class="flag mb-5 col-lg-5 flex-grow-1"><img style="width: 90%;" src="" alt="Flag Country"></div>
+            <!-- End Flag -->
+
+            <!-- Start Country Details  -->
+            <div class="ditals col-lg-5 flex-grow-1">
+                <h1 class="country-name fw-bold mb-4"></h1>
+                <div class="text d-flex flex-column gap-sm-4 gap-lg-0 flex-lg-row flex-wrap flex-grow-1 justify-content-between">
+                    <div class="main-details">
+                        <p class="mt-2">Native Name: <span class="native-name"></span></p>
+                        <p>Population: <span class="population"></span></p>
+                        <p>Region: <span class="region">Africa</span></p>
+                        <p>Sub Region: <span class="sub-region"></span></p>
+                        <p>Capital: <span class="capital"></span></p>
+                    </div>
+                    <div class="other-details mb-4">
+                        <p>Top Level Domain: <span class="domain"></span></p>
+                        <p>Currencies: <span class="currencies"></span></p>
+                        <p>Languages: <span class="lang"></span></p>
+                    </div>
+                </div>
+                <div class="borders mt-3 d-flex flex-lg-row">
+                    <p class="me-3 my-lg-0 pt-3 pt-lg-1">Borders Countries: </p>
+                    <div class="d-flex flex-wrap align-items-center gap-2">
+                        <!-- Borders Will Added Dynamically Here!  -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Country Details  -->
+
+        </section>
+        <!-- End Content Section  -->
+
+    </div>
+    <!-- End Container -->
+    <script src="js/details.js"></script>
+</body>
+
+</html>
