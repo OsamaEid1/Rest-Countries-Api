@@ -183,7 +183,7 @@ req.onreadystatechange = function () {
             let capitalName = c.children[1].children[3].children[0];
             capitalName = capitalName.innerHTML.split(","); //Because some countries codes hav mor than one capital
             window.sessionStorage.setItem("capital", capitalName[0]);
-            location.assign("../details-page.html");
+            location.assign("https://osamaeid1.github.io/Rest-Countries-Api/details-page.html");
         };
     });
 };
