@@ -32,4 +32,6 @@ Users should be able to:
 - CSS custom properties
 - Flex-box
 - CSS Grid
+- Bootstrap 5
 - Mobile-first workflow
+
