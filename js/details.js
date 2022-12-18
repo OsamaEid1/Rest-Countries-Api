@@ -1,15 +1,9 @@
 //Set Dark Theme if it in the home page
 window.onload = () => {
     if (localStorage.getItem("Dark")) {
-        switchTheme();
         setTimeout(function(){
-            let spans = document.querySelectorAll(".borders span");
-                spans.forEach((span) => {
-                console.log(span);
-                span.classList.toggle("elements-dark-theme");
-            });
-        }, 1500);
-
+ 	        switchTheme();
+        }, 2000);
     };
 }
 
