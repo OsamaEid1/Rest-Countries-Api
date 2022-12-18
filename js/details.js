@@ -8,7 +8,7 @@ window.onload = () => {
                 console.log(span);
                 span.classList.toggle("elements-dark-theme");
             });
-        }, 1500); /
+        }, 1500);
 
     };
 }
