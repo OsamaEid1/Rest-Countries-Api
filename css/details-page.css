@@ -22,6 +22,14 @@ body{
 }
 /* End Back Home Button */
 
+/* Start Flag */
+.flag img {
+    box-shadow: 0px 0px 9px #2f2f2f;
+    border-radius: 6px;
+}
+    
+/* End Flag */
+
 /* Start Details  */
 section p{
     font-weight: 600;
