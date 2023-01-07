@@ -13,16 +13,20 @@ let backBtn = document.querySelector(".container > button");
 themeSwitcher.onclick = () => switchTheme();
 
 let dark = false;
+let firstLoad = true;
 function switchTheme() {
     //toggle this class to change the Theme
     document.body.classList.toggle("body-dark-theme");
     header.classList.toggle("elements-dark-theme");
     backBtn.classList.toggle("elements-dark-theme");
-    let spans = document.querySelectorAll(".borders span");
+    let spans = document.querySelectorAll(".borders span"); 
     spans.forEach((span) => {
-        console.log(span);
-        span.classList.toggle("elements-dark-theme");
+        if (firstLoad) 
+            span.classList.add("elements-dark-theme");
+        else 
+            span.classList.toggle("elements-dark-theme");
     });
+    firstLoad = false;
 
     //Change the Theme of the Mode Button and its text
     if (!dark) {
@@ -46,8 +50,8 @@ function switchTheme() {
 let capitalOfTheCountry = window.sessionStorage.getItem("capital");
 let req = new XMLHttpRequest();
 req.open(
-   "GET",
-   `https://restcountries.com/v2/capital/${capitalOfTheCountry}`
+    "GET",
+    `https://restcountries.com/v2/capital/${capitalOfTheCountry}`
 );
 req.send();
 req.onreadystatechange = function () {
@@ -111,24 +115,23 @@ function printTheDetails(jsData){
     // Add border countries with Alpha Code of them
     if (jsData[0].borders != undefined) {    
         for (let i = 0; i < jsData[0].borders.length; i++) {
-        console.log(jsData[0].borders[i]);
-        if (jsData[0].borders[i] != "ISR") {
-           //Check if it is a real state... >> FREE PALESTINE ! <<
-            let countriesNamesReq = new XMLHttpRequest();
-            countriesNamesReq.open(
-                "GET",
-                `https://restcountries.com/v2/alpha/${jsData[0].borders[i]}`
-            );
-            countriesNamesReq.send();
-            countriesNamesReq.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    let countryData = JSON.parse(this.responseText);
-                    let span = document.createElement("span");
-                    span.appendChild(document.createTextNode(countryData.name));
-                    bordersDiv.appendChild(span);
-                }
-            };
-        }
+            if (jsData[0].borders[i] != "ISR") {
+            //Check if it is a real state... >> FREE PALESTINE ! <<
+                let countriesNamesReq = new XMLHttpRequest();
+                countriesNamesReq.open(
+                    "GET",
+                    `https://restcountries.com/v2/alpha/${jsData[0].borders[i]}`
+                );
+                countriesNamesReq.send();
+                countriesNamesReq.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        let countryData = JSON.parse(this.responseText);
+                        let span = document.createElement("span");
+                        span.appendChild(document.createTextNode(countryData.name));
+                        bordersDiv.appendChild(span);
+                    }
+                };
+            }
         }
     } else 
         bordersDiv.append("This Is Island.")
@@ -137,5 +140,5 @@ function printTheDetails(jsData){
 //Back to home page
 backBtn.onclick = () => {
     window.sessionStorage.clear();
-    location.assign("https://osamaeid1.github.io/Rest-Countries-Api/");
+    location.assign("../index.html");
 }
