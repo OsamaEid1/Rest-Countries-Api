@@ -1,6 +1,6 @@
 //Set Dark Theme if it in the home page
 window.onload = () => {
-    if (localStorage.getItem("Dark")) switchTheme();
+    if (localStorage.getItem("Dark"))  switchTheme();
 }
 
 // Switch Theme
@@ -20,14 +20,17 @@ function switchTheme() {
     header.classList.toggle("elements-dark-theme");
     backBtn.classList.toggle("elements-dark-theme");
     let spans = document.querySelectorAll(".borders span"); 
-    spans.forEach((span) => {
-        if (firstLoad) 
-            span.classList.add("elements-dark-theme");
-        else 
+    if (firstLoad) {
+    setTimeout(() => {
+        spans.forEach((span) => {
             span.classList.toggle("elements-dark-theme");
-    });
-    firstLoad = false;
-
+        });
+    }, 500);   
+    } else {
+        spans.forEach((span) => {
+            span.classList.toggle("elements-dark-theme");
+        });
+    }
     //Change the Theme of the Mode Button and its text
     if (!dark) {
         themeIcon.className = "far fa-light fa-sun";
