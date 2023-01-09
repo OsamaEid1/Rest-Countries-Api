@@ -1,8 +1,9 @@
 /* Start Global Rules  */
-*{
+* {
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --Dark-Blue-Dark-Mode-Elements: hsl(209, 23%, 22%);
     --Very-Dark-Blue-Dark-Mode-Background: hsl(207, 26%, 17%);
     --White-Dark-Mode-Text-and-Light-Mode-Elements: hsl(0, 0%, 100%);
@@ -10,51 +11,61 @@
     --Very-Dark-Blue-Light-Mode-Text: hsl(200, 15%, 8%);
     --Dark-Gray-Light-Mode-Input: hsl(0, 0%, 52%);
 }
-body{
+
+body {
     margin: 0;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 14px;
     background-color: var(--Very-Light-Gray-Light-Mode-Background);
 }
+
 .attribution {
-    font-size: 11px; text-align: center;
+    font-size: 11px;
+    text-align: center;
 }
-.attribution a { 
+
+.attribution a {
     color: lightslategray
 }
-.body-dark-theme{
+
+.body-dark-theme {
     background-color: var(--Very-Dark-Blue-Dark-Mode-Background);
     color: var(--White-Dark-Mode-Text-and-Light-Mode-Elements);
 }
-.elements-dark-theme{
+
+.elements-dark-theme {
     background-color: var(--Dark-Blue-Dark-Mode-Elements) !important;
     color: var(--White-Dark-Mode-Text-and-Light-Mode-Elements) !important;
 }
+
 .search .input-group,
-select{
+select {
     border: none !important;
     box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px 0px !important;
 }
+
 .form-control:focus,
-select:focus{
+select:focus {
     box-shadow: none;
     border: none !important;
     outline: none;
     background-color: transparent !important;
 }
+
 body,
 header,
 .theme-switcher,
 .input-group,
 input,
 select,
-.country{
+.country {
     transition: 0.3s !important;
 }
+
 /* End Global Rules  */
 
 /* Start Header  */
-header{
+header {
     background-color: white;
     color: var(--Very-Dark-Blue-Light-Mode-Text);
     padding: 20px 0;
@@ -63,7 +74,8 @@ header{
     top: 0;
     z-index: 99;
 }
-header .theme-switcher{
+
+header .theme-switcher {
     box-shadow: rgb(0 0 0 / 15%) 1px 2px 7px 1px;
     border-radius: 15px;
     cursor: pointer;
@@ -71,44 +83,69 @@ header .theme-switcher{
     display: flex;
     align-items: center;
 }
+
+@media (max-width: 480px) {
+    header h2 {
+        margin: 0;
+    }
+
+    .theme-switcher span {
+        display: none;
+        padding: 5px;
+    }
+
+    .theme-switcher i {
+        padding: 2px;
+        font-size: 1.1rem;
+    }
+}
+
 /* End Header */
 
 /* Start Search */
-.search .input-group{
+.search .input-group {
     width: 100%;
 }
-@media (min-width: 992px) { 
-    .search .input-group{
+
+@media (min-width: 992px) {
+    .search .input-group {
         width: 25%;
     }
 }
-.search i{
+
+.search i {
     color: var(--Dark-Gray-Light-Mode-Input);
 }
-.search select{
+
+.search select {
     width: 50%;
     cursor: pointer;
 }
-@media (min-width: 992px) { 
-    .search select{
+
+@media (min-width: 992px) {
+    .search select {
         width: 15%;
     }
 }
+
 /* End Search */
 /* Start Countries */
-.countries{
+.countries {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 60px;
 }
-.countries .country{
+
+.countries .country {
     background-color: hsl(0deg 0% 95% / 0%);
     box-shadow: rgb(0 0 0 / 15%) 0px 0px 10px 0px;
     cursor: pointer;
 }
-.countries .country:hover{
+
+.countries .country:hover {
     transform: translateY(-10px);
 }
+
 /* End Countries */
 /* Start ScrollTop Button  */
 .scroll-top-btn {
@@ -125,10 +162,13 @@ header .theme-switcher{
     right: -100%;
     transition: 1s;
 }
+
 .scroll-top-btn:hover {
     background-color: rgb(28, 27, 27);
 }
+
 .show {
     right: 20px;
 }
+
 /* End ScrollTop Button  */
