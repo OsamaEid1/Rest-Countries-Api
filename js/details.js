@@ -143,5 +143,5 @@ function printTheDetails(jsData){
 //Back to home page
 backBtn.onclick = () => {
     window.sessionStorage.clear();
-    location.assign("../index.html");
+    window.history.back();
 }
